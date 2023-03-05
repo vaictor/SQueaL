@@ -1,5 +1,6 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "root", "three_little_pigs");
+    include_once('config.php');
+    $mysqli = new mysqli($server, $dbuser, $dbpawd, $dbname,$dbport);
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

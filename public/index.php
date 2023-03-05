@@ -1,6 +1,6 @@
 <?php
     $page_title = 'Home';
-    include('header.php');
+    include_once('header.php');
 ?>
 
     <section>
@@ -15,7 +15,7 @@
                     <h2 class="title text-center">Features Items</h2>
 <?php
     $products = $mysqli->query('SELECT * FROM product WHERE featured = 1 ORDER BY name;');
-    include('items.php');
+    include_once('items.php');
 ?>
                 </div><!--features_items-->
 
@@ -24,4 +24,4 @@
     </div>
     </section>
 
-<?php include('footer.php'); ?>
+<?php include_once('footer.php'); ?>

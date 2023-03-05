@@ -1,6 +1,7 @@
 <?php
 if(isset($_POST['username']) && isset($_POST['password'])){
-    $mysqli = new mysqli("localhost", "root", "root", "three_little_pigs");
+    include_once('config.php');
+    $mysqli = new mysqli($server, $dbuser, $dbpawd, $dbname,$dbport);
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -22,7 +23,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 }
 
 $page_title = 'Hidden Admin';
-include('header.php');
+include_once('header.php');
 ?>
 
     <section id="form"><!--form-->
@@ -37,4 +38,4 @@ include('header.php');
         </div>
     </section><!--/form-->
 
-<?php include('footer.php'); ?>
+<?php include_once('footer.php'); ?>

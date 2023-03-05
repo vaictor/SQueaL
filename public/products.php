@@ -1,5 +1,6 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "root", "three_little_pigs");
+    include_once('config.php');
+    $mysqli = new mysqli($server, $dbuser, $dbpawd, $dbname,$dbport);
     if(isset($_GET['category'])) {
         $category_id = $_GET['category'];
         $categories = $mysqli->query("SELECT name FROM product_category WHERE id = $category_id;")
@@ -18,7 +19,7 @@
     $products = $mysqli->query($query)
         or trigger_error("Query Failed! SQL: $sql - Error: ".$mysqli->error, E_USER_ERROR);
     $mysqli->close();
-    include('header.php');
+    include_once('header.php');
 ?>
 
 <section>

@@ -1,5 +1,6 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "root", "three_little_pigs");
+    include_once('config.php');
+    $mysqli = new mysqli($server, $dbuser, $dbpawd, $dbname,$dbport);
     if(isset($_GET['product'])){
         $product_id = $_GET['product'];
         $products = $mysqli->query("SELECT * FROM product WHERE id = $product_id;");
@@ -10,7 +11,7 @@
         exit();
     }
     $mysqli->close();
-    include('header.php');
+    include_once('header.php');
 ?>
 
 <section>

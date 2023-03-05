@@ -2,29 +2,27 @@ SQueaL
 ======
 
 This is a lab environment for playing with SQL injection. The web application
-provided in this virtual machine has a few points of attack. Can you find them
+provided in this docker compose has a few points of attack. Can you find them
 **ALL**?
 
 Installation:
 -------------
 
-Download and install [VirtualBox](http://www.virtualbox.org/)
-
-Download and install [vagrant](http://vagrantup.com/)
+Download and install [Docker](https://www.docker.com/products/docker-desktop/)
 
 Clone this repo:
 
-	$ git clone https://github.com/jbarone/SQueaL.git
+	$ git clone https://github.com/vaictor/SQueaL.git
 
 Using:
 ------
 
-Once installed, change directory  to cloned folder and start up the virtual machine.
+Once installed, change directory  to cloned folder and start up the docker container.
 
 	$ cd SQueaL
-	$ vagrant up
+	$ docker compose up
 
 With the virtual machine up and running, navigate to the
-[website](http://192.168.33.10) and have at it
+[website](http://localhost:90/) and have at it
 
-[http://192.168.33.10](http://192.168.33.10)
+[http://localhost:90/](http://localhost:90/)

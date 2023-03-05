@@ -1,6 +1,6 @@
 <?php
     $page_title = 'Login';
-    include('header.php');
+    include_once('header.php');
 ?>
 
     <section id="form"><!--form-->

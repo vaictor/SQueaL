@@ -39,7 +39,7 @@ services:
       - redSoftwareSeguro
 
   bdMysql:
-    image: mysql:latest
+    image: mysql:8.0-debian
     mem_limit: 512m
     mem_reservation: 128M
     cpus: 0.5
